@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    instrumentationHook: true,
-  },
+  basePath: '/final',
+  trailingSlash: false,
+  reactStrictMode: true,
 };
-
 export default nextConfig;
