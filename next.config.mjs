@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/final',
-  trailingSlash: false,
-  reactStrictMode: true,
+  basePath: '/final'
 };
 export default nextConfig;
