@@ -4,7 +4,7 @@ module.exports = {
       name: "final",
       cwd: "/home/codes/final",
       script: "pnpm",
-      args: "start -- -p 3002",
+      args: "start -- 3002",
       env: {
         NODE_ENV: "production",
         PORT: "3002"
