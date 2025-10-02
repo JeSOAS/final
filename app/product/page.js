@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const API_BASE = process.env.NEXT_PUBLIC_API_URL;
+  const API_BASE = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/api`;
   console.debug("API_BASE", API_BASE);
   const { register, handleSubmit } = useForm();
   const [products, setProducts] = useState([]);
@@ -12,7 +12,6 @@ export default function Home() {
 
   async function fetchProducts() {
     const data = await fetch(`${API_BASE}/product`);
-    // const data = await fetch(`http://localhost:3000/product`);
     const p = await data.json();
     setProducts(p);
   }

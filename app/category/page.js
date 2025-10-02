@@ -7,7 +7,6 @@ import { DataGrid } from "@mui/x-data-grid";
 export default function Home() {
 
   const columns = [
-    // { field: 'id', headerName: 'ID', width: 90 },
     { field: 'name', headerName: 'Name', width: 150 },
     { field: 'order', headerName: 'Order', width: 150 },
     {
@@ -23,8 +22,8 @@ export default function Home() {
     },
   ]
 
-  const API_BASE = process.env.NEXT_PUBLIC_API_URL;
-  console.log(process.env.NEXT_PUBLIC_API_URL)
+  const API_BASE = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/api`;
+  console.debug("API_BASE", API_BASE);
 
   const [categoryList, setCategoryList] = useState([]);
   const [editMode, setEditMode] = useState(false);
